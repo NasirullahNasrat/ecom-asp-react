@@ -1,0 +1,96 @@
+Database : 
+
+-- Create the User table
+CREATE TABLE Users (
+    UserID INT PRIMARY KEY IDENTITY(1,1),
+    FirstName NVARCHAR(50) NOT NULL,
+    LastName NVARCHAR(50) NOT NULL,
+    Email NVARCHAR(100) UNIQUE NOT NULL,
+    Phone NVARCHAR(20) NOT NULL,
+    Password NVARCHAR(MAX) NOT NULL,
+    Address NVARCHAR(200) NULL,
+    City NVARCHAR(100) NULL,
+    PostalCode NVARCHAR(20) NULL
+);
+
+-- Insert demo user
+INSERT INTO User (FirstName, LastName, Email, Phone, Password, Address, City, PostalCode)
+VALUES
+    ('John', 'Doe', 'john.doe@example.com', '555-1234', 'password1', '123 Main St', 'Anytown', '12345'),
+    ('Jane', 'Smith', 'jane.smith@example.com', '555-5678', 'password2', '456 Oak Rd', 'Somewhere', '54321'),
+    ('Bob', 'Johnson', 'bob.johnson@example.com', '555-9012', 'password3', '789 Elm St', 'Elsewhere', '98765'),
+    ('Alice', 'Williams', 'alice.williams@example.com', '555-3456', 'password4', '321 Pine Ln', 'Anywhere', '24680'),
+    ('Tom', 'Davis', 'tom.davis@example.com', '555-7890', 'password5', '654 Maple Ave', 'Everywhere', '13579');
+
+
+
+
+CREATE TABLE Product (
+    ProductID INT PRIMARY KEY,
+    Name NVARCHAR(100) NOT NULL,
+    Brand NVARCHAR(100) NOT NULL,
+    [Description] NVARCHAR(MAX) NOT NULL,
+    ImageURL NVARCHAR(MAX) NOT NULL
+);
+
+INSERT INTO Product (ProductID, Name, Brand, [Description], ImageURL)
+VALUES
+    (1, 'Product 1', 'Brand A', 'Description for Product 1', 'https://example.com/product1.jpg'),
+    (2, 'Product 2', 'Brand B', 'Description for Product 2', 'https://example.com/product2.jpg'),
+    (3, 'Product 3', 'Brand A', 'Description for Product 3', 'https://example.com/product3.jpg'),
+    (4, 'Product 4', 'Brand C', 'Description for Product 4', 'https://example.com/product4.jpg'),
+    (5, 'Product 5', 'Brand B', 'Description for Product 5', 'https://example.com/product5.jpg');
+
+
+
+CREATE TABLE PRODUCT_SIZE (
+    ProductSizeID INT PRIMARY KEY,
+    Size INT NOT NULL,
+    Price DECIMAL(18,2) NOT NULL,
+    Quantity INT NOT NULL,
+    ProductID INT NOT NULL,
+    FOREIGN KEY (ProductID) REFERENCES Product(ProductID)
+);
+
+INSERT INTO PRODUCT_SIZE (ProductSizeID, Size, Price, Quantity, ProductID)
+VALUES
+    (1, 8, 19.99, 10, 1),
+    (2, 9, 21.99, 8, 1),
+    (3, 10, 23.99, 5, 1),
+    (4, 8, 18.99, 15, 2),
+    (5, 9, 20.99, 12, 2),
+    (6, 10, 22.99, 7, 2),
+    (7, 8, 17.99, 20, 3),
+    (8, 9, 19.99, 18, 3),
+    (9, 10, 21.99, 14, 3),
+    (10, 8, 16.99, 25, 4),
+    (11, 9, 18.99, 22, 4),
+    (12, 10, 20.99, 18, 4),
+    (13, 8, 15.99, 30, 5),
+    (14, 9, 17.99, 27, 5),
+    (15, 10, 19.99, 23, 5);
+
+
+CREATE TABLE [Order] (
+    OrderID INT PRIMARY KEY IDENTITY(1,1),
+    OrderDateTime DATETIME NOT NULL,
+    TotalPrice DECIMAL(18,2) NOT NULL,
+    OrderStatus NVARCHAR(50) NOT NULL,
+    UserID INT NOT NULL,
+    FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);
+
+
+
+CREATE TABLE OrderItem (
+    OrderItemID INT PRIMARY KEY,
+    Quantity INT NOT NULL,
+    OrderID INT NOT NULL,
+    ProductSizeID INT NOT NULL,
+    CONSTRAINT FK_OrderItem_Order FOREIGN KEY (OrderID)
+        REFERENCES [Order](OrderID),
+    CONSTRAINT FK_OrderItem_ProductSize FOREIGN KEY (ProductSizeID)
+        REFERENCES PRODUCT_SIZE(ProductSizeID)
+);
+
+
