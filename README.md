@@ -47,12 +47,12 @@ To get a local copy up and running, follow these steps.
      
 ## Previews
 
-**Browsing and Shopping**
+**Firt Page**
+(https://drive.google.com/file/d/1bZmPqs-6yrD0-khrwlBTmEud4MS0FTw-/view?usp=drive_link)
+
+**Products List**
 
 
-**Complete Checkout and User Profile**
-
-
-**Managing Products**
+**Login Page**
 
 
