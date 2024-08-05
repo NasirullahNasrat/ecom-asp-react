@@ -70,3 +70,5 @@ To get a local copy up and running, follow these steps.
 (https://github.com/NasirullahNasrat/ecom-asp-react/blob/main/6.jpg)
 
 (https://github.com/NasirullahNasrat/ecom-asp-react/blob/main/7.jpg)
+
+(https://github.com/NasirullahNasrat/ecom-asp-react/blob/main/8.jpg)
