@@ -48,7 +48,7 @@ To get a local copy up and running, follow these steps.
 ## Previews
 
 **Firt Page**
-
+   (https://github.com/NasirullahNasrat/ecom-asp-react/blob/main/1.jpg)
 
 **Products List**
 
