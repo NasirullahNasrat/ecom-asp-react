@@ -48,11 +48,23 @@ To get a local copy up and running, follow these steps.
 ## Previews
 
 **Firt Page**
-   (https://github.com/NasirullahNasrat/ecom-asp-react/blob/main/1.jpg)
+
+(https://github.com/NasirullahNasrat/ecom-asp-react/blob/main/1.jpg)
 
 **Products List**
 
+(https://github.com/NasirullahNasrat/ecom-asp-react/blob/main/2.jpg)
+
+**Registration Page**
+
+(https://github.com/NasirullahNasrat/ecom-asp-react/blob/main/3.jpg)
 
 **Login Page**
 
+(https://github.com/NasirullahNasrat/ecom-asp-react/blob/main/4.jpg)
 
+**Others**
+
+(https://github.com/NasirullahNasrat/ecom-asp-react/blob/main/5.jpg)
+(https://github.com/NasirullahNasrat/ecom-asp-react/blob/main/6.jpg)
+(https://github.com/NasirullahNasrat/ecom-asp-react/blob/main/7.jpg)
