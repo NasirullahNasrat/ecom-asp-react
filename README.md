@@ -48,7 +48,7 @@ To get a local copy up and running, follow these steps.
 ## Previews
 
 **Firt Page**
-(https://drive.google.com/file/d/1bZmPqs-6yrD0-khrwlBTmEud4MS0FTw-/view?usp=drive_link)
+
 
 **Products List**
 
