@@ -20,7 +20,7 @@ To get a local copy up and running, follow these steps.
 
 1. Clone the repo
    ```sh
-   
+   https://github.com/NasirullahNasrat/ecom-asp-react.git
    ```
 
 2. Back end:
